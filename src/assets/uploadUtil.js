@@ -1,7 +1,7 @@
 var ImageUploadUtil = {
     _tempObjectURL: null,
     _canavs: null,
-    _limitSize: 5 * 1024 * 1024,// 5M 5242880
+    _limitSize: 10 * 1024 * 1024,// 10M 5242880
     _imageAccept: ['image/jpg', 'image/jpeg', 'image/png'],
     _rules: [{
         size: 1 * 1024 * 1024,
@@ -121,7 +121,15 @@ var ImageUploadUtil = {
             return false
         }
         return true
-    }
+    },
+    getArrayBuffer: function (file,cb) {
+        var fileReader = new FileReader()
+        fileReader.onload = function (e) {
+            console.log(e.target.result)
+            cb(e.target.result)
+        };
+        fileReader.readAsArrayBuffer(file);
+    },
 }
 
 export default ImageUploadUtil
