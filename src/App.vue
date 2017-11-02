@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+     <audio src="/static/music.mp3" id="audio"></audio>
     <router-view/>
     <!-- <index></index> -->
   </div>

@@ -71,7 +71,7 @@
       <div class="chooseBox">
         <div>
           <span>选择文案</span>
-          <span style="float:right" @click="ensureWord">确认</span>
+          <span class="ensureWord" @click="ensureWord">确认</span>
         </div> 
       <div class="chooseWord">
         <div class="imgbox" :style="{backgroundImage: 'url('+ item +')'}" v-for="(item, index) in words" :key="index" :class="{active: checkedWord == index}" @click="checkWord(index)">
@@ -163,6 +163,7 @@ export default {
       if (this.checkedWord == 2 || this.checkedWord == 4) {
         defaultPos = this.position.right;
       }
+      document.getElementById('audio').play()
       this.ImagesLoaded(
         [bg, this.cups[seed], this.words[this.checkedWord]],
         (index, imgs) => {
@@ -185,6 +186,7 @@ export default {
       );
     },
     cancel() {
+      // document.getElementById('audio').play()
       if (this.cropper != null) {
         this.cropper.destroy();
         this.showBtns = false;
@@ -442,7 +444,7 @@ export default {
 }
 .chooseBox {
   background: #fff;
-  padding: 0.2rem 0.3rem;
+  padding: 0.25rem 0.3rem;
   height: 100%;
   text-align: center;
 }
@@ -450,7 +452,7 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 0.2rem;
+  padding-top: 0.25rem;
   .imgbox {
     width: 3.2rem;
     height: 3.2rem;
@@ -473,5 +475,9 @@ export default {
   top: 3rem;
   margin: auto;
   z-index: 200;
+}
+.ensureWord{
+  position: absolute;
+  right:0.2rem;
 }
 </style>
