@@ -1,46 +1,5 @@
 <template>
   <div class="container" ref="container">
-    <div class="loading-box" v-show="showloading">
-      <svg class="lds-spookyghost" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">      <g transform="translate(50 50)">
-      <g transform="scale(1 -1)">
-      <g transform="translate(-50 -50)">
-      <g transform="rotate(311.205 50 50)">
-        <animateTransform attributeName="transform" type="rotate" values="-2 50 50;359 50 50" keyTimes="0;1" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1"></animateTransform>
-        <circle cx="50" cy="50" r="39.891" stroke="#f2f2f2" stroke-width="14.4" fill="none" stroke-dasharray="0 300">
-          <animate attributeName="stroke-dasharray" values="10 300;60.15421082128821 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
-        </circle>
-        <circle cx="50" cy="50" r="39.891" stroke="#f2f2f2" stroke-width="7.2" fill="none" stroke-dasharray="0 300">
-          <animate attributeName="stroke-dasharray" values="10 300;60.15421082128821 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
-        </circle>
-        <circle cx="50" cy="50" r="32.771" stroke="#000000" stroke-width="1" fill="none" stroke-dasharray="0 300">
-          <animate attributeName="stroke-dasharray" values="10 300;49.41750376837973 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
-        </circle>
-        <circle cx="50" cy="50" r="47.171" stroke="#000000" stroke-width="1" fill="none" stroke-dasharray="0 300">
-          <animate attributeName="stroke-dasharray" values="10 300;72.03697087422624 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
-        </circle>
-      </g></g> </g></g>
-      <g transform="rotate(47.6625 50 50)">
-        <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1"></animateTransform>
-        <path fill="#f2f2f2" stroke="#000000" d="M82.8,50c0,0.9,0.7,2.6,1.8,3.7c0.3,0.3,0.8,0.6,1,1c0.2,0.5,0.2,1-0.1,1.5c-0.3,0.5-0.8,0.9-1.1,1.3 c-0.5,0.5-0.8,1.1-0.9,1.7c-0.2,0.6-0.2,1.2,0.2,1.8c0.6,1,2,1.7,2,2.8c-0.1,0.9-1,1.5-1.4,2.2c-0.3,0.6-0.4,1.2-0.2,1.9 c0.2,0.7,0.5,1.3,1,1.8c1,1,2.4,1.4,3.9,1.5c-1.1-1-1.2-2.7-0.5-4c0.7-1.2,2.2-1.9,2.5-3.3c0.2-1.2-0.4-2.5,0.1-3.6 c0.7-1.5,3.3-1.3,4.1-2.9c0.3-0.9,0-1.9,0.3-2.8c0.2-0.7,0.6-1.1,1-1.5c0.4-0.4,0.8-0.9,0.9-1.6c0.1-0.5,0.1-0.9,0.1-1.6"></path>
-
-      </g>
-      <g transform="rotate(17.5114 50 50)">
-        <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" begin="-0.18000000000000002s"></animateTransform>
-
-        <path fill="#f2f2f2" stroke="#000000" d="M82.8,50c-0.1-3.1-0.4-6.2-1.3-9.2c-0.1-0.4-0.2-0.8-0.2-1.2c-0.1-0.4-0.1-0.8,0-1.2c0.1-0.8,0.3-1.6,0.7-2.4 c0.8-1.5,2-3,3.8-3.9l0,0c1.8-0.9,3.8-1,5.6-0.2c0.9,0.4,1.7,1,2.4,1.8c0.3,0.4,0.7,0.8,1,1.3c0.2,0.5,0.4,1,0.6,1.6 c1.4,4.3,1.9,8.8,1.9,13.3"></path>
-        <path fill="#ff7bac" d="M93.6,35.5c0.1,0.4-0.3,0.8-1,1c-0.6,0.2-1.2,0.1-1.3-0.3c-0.1-0.3,0.3-0.8,0.9-1S93.5,35.1,93.6,35.5z"></path>
-        <path fill="#ff7bac" d="M82.3,39.3c0.1,0.3,0.6,0.3,1.3,0.1c0.6-0.2,1.1-0.6,1-0.9c-0.1-0.3-0.7-0.3-1.3-0.1 C82.6,38.6,82.2,39,82.3,39.3z"></path>
-        <path fill="#000000" d="M88.9,37.5c0.1,0.3-0.2,0.7-0.7,0.8c-0.5,0.1-0.9,0-1-0.3c-0.1-0.3,0.2-0.7,0.7-0.8C88.4,37,88.9,37.2,88.9,37.5z"></path>
-        <path fill="none" stroke="#000000" d="M86.2,39.6c0.2,0.6,0.8,0.9,1.4,0.7c0.6-0.2,0.9-0.9,0.6-2.1c0.3,1.2,1,1.7,1.6,1.5c0.6-0.2,1-0.8,0.8-1.4"></path>
-        <path fill="#f2f2f2" stroke="#000000" d="M82.5,45.9c0,0.5,0.1,0.9,0.5,1.3c0.4,0.4,1,0.6,1.6,0.3c0.3-0.1,0.5-0.3,0.7-0.4c0.5-0.2,1.2,0.1,1.5,0.6 c0.3,0.5,0.3,1,0.3,1.6c0.6-0.6,1-1.4,1.3-2.2c0.2-0.7,0.4-1.5,0.2-2.2c-0.2-0.7-0.8-1.3-1.5-1.5c-0.9-0.2-1.8,0.2-2.5,0.7"></path>
-        <path fill="#f2f2f2" stroke="#000000" d="M96.8,44.1c0.1,0.7,0.1,1.4-0.2,2c-0.3,0.6-0.9,1-1.5,0.7c-0.3-0.1-0.5-0.4-0.8-0.4c-0.6-0.2-1.2,0.3-1.4,0.9 c-0.2,0.6-0.1,1.2-0.1,1.9c-0.6-0.7-1.2-1.5-1.6-2.3c-0.4-0.7-0.6-1.5-0.6-2.2c0-0.8,0.3-1.6,0.9-2c0.7-0.5,1.7-0.5,2.6-0.1"></path>
-        <path fill="#b5b5b5" d="M85.3,37.2c0.1,0.3,1.2,0.2,2.5-0.3c1.3-0.4,2.2-1.1,2.1-1.4c-0.1-0.3-1.2-0.2-2.5,0.3 C86.1,36.3,85.2,36.9,85.3,37.2z"></path>
-        <path fill="#000000" d="M91.5,35c0.3,0.7,0,1.4-0.7,1.6c-0.6,0.2-1.3-0.1-1.6-0.8c-0.2-0.6,0.1-1.3,0.7-1.6C90.6,33.9,91.3,34.3,91.5,35z"></path>
-        <path fill="#000000" d="M85.9,37c0.2,0.6-0.1,1.2-0.7,1.4c-0.6,0.2-1.3-0.1-1.5-0.6c-0.2-0.5,0.1-1.2,0.7-1.4C85,36.2,85.7,36.4,85.9,37z"></path>
-        <path fill="none" stroke="#000000" d="M89.7,29c0.4,0.7-1.4,2.2-3.8,3.4c-2.5,1.2-4.7,1.7-4.9,1.2c-0.3-0.5,1.4-2,3.8-3.4S89.4,28.4,89.7,29z"></path>
-
-      </g></svg>
-    </div>
     <div class="index" v-show="showIndex">
       <img src="../assets/logo.png" alt="" class="logo">
     <transition appear appear-class="img-appear" appear-to-class="img-appear-to" appear-active-class="fade-In-active">
@@ -63,6 +22,7 @@
     </transition>
     </div>
     <img :src="url" alt="" style="display:none"ref="img">
+    <img :src="qrcode" style="display:none" alt="" ref="qrcode">
     <div class="crop-btns" v-show="showBtns">
       <span class="cancel" @click="cancel">取消</span>
       <span class="ensure" @click="ensure">确定</span>
@@ -110,15 +70,17 @@ export default {
         require("../assets/word5.png")
       ],
       cups: [
-        require("../assets/cup1.png"),
-        require("../assets/cup2.png"),
-        require("../assets/cup3.png"),
-        require("../assets/cup4.png"),
-        require("../assets/cup5.png")
+        require("../assets/Acup.png"),
+        require("../assets/Bcup.png"),
+        require("../assets/Ccup.png"),
+        require("../assets/Dcup.png"),
+        require("../assets/Ecup.png")
       ],
+      qrcode: require("../assets/qrcode.png"),
       isExpand: false,
       checkedWord: 0,
       cropperCanvas: null,
+      isClick: false,
       position: {
         left: {
           cup: {
@@ -155,15 +117,17 @@ export default {
       this.checkedWord = index;
     },
     ensureWord() {
+      if (!this.isClick) {
+      }
       let seed = Math.floor(Math.random() * 6);
       this.isExpand = false;
       this.showloading = true;
-      var defaultPos = this.position.left; //确定文字和cup位置
-      var bg = require("../assets/cup_bg.png");
-      if (this.checkedWord == 2 || this.checkedWord == 4) {
-        defaultPos = this.position.right;
-      }
-      document.getElementById('audio').play()
+      // var defaultPos = this.position.left; //确定文字和cup位置
+      // var bg = require("../assets/cup_bg.png");
+      // if (this.checkedWord == 2 || this.checkedWord == 4) {
+      //   defaultPos = this.position.right;
+      // }
+      // document.getElementById("audio").play(); document.getElementById("audio").play();
       this.ImagesLoaded(
         [bg, this.cups[seed], this.words[this.checkedWord]],
         (index, imgs) => {
@@ -195,7 +159,7 @@ export default {
     },
     ImagesLoaded(source = [], cb) {
       let successIndex = 0;
-      let imgs = {};
+      let imgs = [];
       source.map((item, index) => {
         var img = new Image();
         img.onload = () => {
@@ -207,36 +171,57 @@ export default {
       });
     },
     ensure() {
-      if (this.cropper != null) {
-        this.cropperCanvas = this.cropper.getCroppedCanvas({
-          width: 280,
-          height: 670
-        });
-        this.isExpand = true;
-        // var canavses = document.createElement("canvas");
-        // var ctx = canavses.getContext("2d");
-        // var img = new Image();
-        // img.onload = () => {
-        //   canavses.width = img.width;
-        //   canavses.height = img.height;
-        //   ctx.fillStyle = "#fff";
-        //   ctx.fillRect(0, 0, canavses.width, canavses.height);
-        //   ctx.drawImage(canvas, 221, 424, canvas.width, canvas.height);
-        //   ctx.drawImage(img, 0, 0, img.width, img.height);
-        //   var urlSrc = canavses.toDataURL("image/jpeg", 1);
-        //   Vue.prototype.$urlSrc = urlSrc;
-        //   this.$router.push({ name: "Result" });
-        // };
-        // img.src = require("../assets/cup_bg.png");
-        // ctx.drawImage();
-        // console.log(this)
-        // this.$router.push({ name: "Result" });
+      if (!this.isClick) {
+        this.isClick = true;
+        if (this.cropper != null) {
+          this.cropperCanvas = this.cropper.getCroppedCanvas({
+            width: 285,
+            height: 670
+          });
+          // this.isExpand = true;
+          let seed = Math.floor(Math.random() * 5);
+          let bg = this.cups[seed];
+          this.showloading = true;
+          // document.getElementById("audio").play();
+          try {
+            this.ImagesLoaded([bg, this.qrcode], (index, imgs) => {
+              if (index == imgs.length) {
+                let canvas = document.createElement("canvas");
+                let ctx = canvas.getContext("2d");
+                canvas.width = imgs[0].width;
+                canvas.height = imgs[0].height;
+                ctx.fillStyle = "#ffffff";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                let pos = [221, 420];
+                let qrpos = [594, 1018];
+                if (seed == 4) {
+                  pos = [221, 400];
+                }
+                console.log(seed);
+                if (seed == 1 || seed == 4) {
+                  qrpos = [54, 1018];
+                }
+
+                ctx.drawImage(this.cropperCanvas, ...pos);
+                ctx.drawImage(imgs[0], 0, 0);
+                ctx.drawImage(imgs[1], ...qrpos, 110, 110);
+                // ctx.drawImage(imgs[1], defaultPos.cup.x, defaultPos.cup.y);
+                // ctx.drawImage(imgs[2], defaultPos.word.x, defaultPos.word.y);
+                var urlSrc = canvas.toDataURL("image/jpeg", 1);
+                Vue.prototype.$urlSrc = urlSrc;
+                this.$router.push({ name: "Result" });
+              }
+            });
+          } catch (error) {
+            this.isClick = false;
+          }
+        }
       }
     },
     upload(e) {
       let file = e.target.files[0];
       if (!ImageUtil._validImageSizeAndType(file)) {
-        alert('请选在小于10M的照片')
+        alert("请选在小于10M的照片");
         return;
       }
       this.url = ImageUtil.getObjectURL(file);
@@ -266,11 +251,12 @@ export default {
         this.show = false;
         this.showBtns = true;
         this.cropper = new Cropper(this.$refs.img, {
-          aspectRatio: 280 / 670,
+          aspectRatio: 285 / 670,
           viewMode: 1,
           dragMode: "move",
           cropBoxMovable: false,
-          cropBoxResizable: false
+          cropBoxResizable: false,
+          rotatable: true
           // crop: function(e) {
           //   console.log(e.detail.x);
           //   console.log(e.detail.y);
@@ -468,16 +454,17 @@ export default {
 }
 .loading-box {
   position: fixed;
-  width: 2rem;
-  height: 2rem;
+  // width: 2rem;
+  // height: 2rem;
   left: 0;
   right: 0;
   top: 3rem;
   margin: auto;
   z-index: 200;
+  text-align: center;
 }
-.ensureWord{
+.ensureWord {
   position: absolute;
-  right:0.2rem;
+  right: 0.2rem;
 }
 </style>

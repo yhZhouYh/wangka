@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- <img src="./assets/zhaobei.png" alt=""style="visibility:hidden;position:absolute;"> -->
      <audio src="/static/music.mp3" id="audio"></audio>
     <router-view/>
     <!-- <index></index> -->
