@@ -102,6 +102,30 @@ var ImageUploadUtil = {
         } finally {
         }
     },
+    dataURLtoBlob2: function (dataURI) {
+        var byteString = atob(dataURI.split(',')[1]);
+        var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+        var ab = new ArrayBuffer(byteString.length);
+        var ia = new Uint8Array(ab);
+        for (var i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+        }
+        return new Blob([ab], { type: mimeString });
+    },
+    dataURLtoBlob3: function (dataurl) {
+        var arr = dataurl.split(',');
+        var mime = arr[0].match(/:(.*?);/)[1];// 结果：   image/png
+        console.log("arr[0]====" + JSON.stringify(arr[0]));//   "data:image/png;base64"
+        console.log("arr[0].match(/:(.*?);/)====" + arr[0].match(/:(.*?);/));// :image/png;,image/png
+        console.log("arr[0].match(/:(.*?);/)[1]====" + arr[0].match(/:(.*?);/)[1]);//   image/png
+        var bstr = atob(arr[1].replace(/\s/g, ''));
+        var n = bstr.length;
+        var u8arr = new Uint8Array(n);
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        return new Blob([u8arr], { type: mime });//值，类型
+    },
     dataURLtoBlob: function (dataurl) {
         var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
             bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
@@ -109,6 +133,18 @@ var ImageUploadUtil = {
             u8arr[n] = bstr.charCodeAt(n);
         }
         return new Blob([u8arr], { type: mime });
+    },
+    convertBase64UrlToFileOrBlob: function (dataURI, type = 0) {
+        var arr = dataURI.split(','), mime = arr[0].match(/:(.*?);/)[1],
+            bstr = atob(arr[1]), fileExt = mime.split('/')[1], n = bstr.length, u8arr = new Uint8Array(n);//$window.atob   
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        if (type) {
+            return new Blob([u8arr], { type: mime });
+        } else {
+            return new File([u8arr], "file_" + Date.parse(new Date()) + fileExt + '.jpg', { type: mime });
+        }
     },
     // 验证文件类型和大小
     _validImageSizeAndType: function (file) {
@@ -122,7 +158,7 @@ var ImageUploadUtil = {
         }
         return true
     },
-    getArrayBuffer: function (file,cb) {
+    getArrayBuffer: function (file, cb) {
         var fileReader = new FileReader()
         fileReader.onload = function (e) {
             console.log(e.target.result)

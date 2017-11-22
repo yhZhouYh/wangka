@@ -1,5 +1,50 @@
 <template>
   <div class="container" ref="container">
+      <div class="loadding-div"  v-if="showloading">
+        <div class="loading-box">
+      
+      <svg class="lds-spookyghost" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">      <g transform="translate(50 50)">
+      <g transform="scale(1 -1)">
+      <g transform="translate(-50 -50)">
+      <g transform="rotate(311.205 50 50)">
+        <animateTransform attributeName="transform" type="rotate" values="-2 50 50;359 50 50" keyTimes="0;1" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1"></animateTransform>
+        <circle cx="50" cy="50" r="39.891" stroke="#f2f2f2" stroke-width="14.4" fill="none" stroke-dasharray="0 300">
+          <animate attributeName="stroke-dasharray" values="10 300;60.15421082128821 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
+        </circle>
+        <circle cx="50" cy="50" r="39.891" stroke="#f2f2f2" stroke-width="7.2" fill="none" stroke-dasharray="0 300">
+          <animate attributeName="stroke-dasharray" values="10 300;60.15421082128821 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
+        </circle>
+        <circle cx="50" cy="50" r="32.771" stroke="#000000" stroke-width="1" fill="none" stroke-dasharray="0 300">
+          <animate attributeName="stroke-dasharray" values="10 300;49.41750376837973 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
+        </circle>
+        <circle cx="50" cy="50" r="47.171" stroke="#000000" stroke-width="1" fill="none" stroke-dasharray="0 300">
+          <animate attributeName="stroke-dasharray" values="10 300;72.03697087422624 300;4 300" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" calcMode="linear" keySplines="0 1 1 0;0 1 1 0"></animate>
+        </circle>
+      </g></g> </g></g>
+      <g transform="rotate(47.6625 50 50)">
+        <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1"></animateTransform>
+        <path fill="#f2f2f2" stroke="#000000" d="M82.8,50c0,0.9,0.7,2.6,1.8,3.7c0.3,0.3,0.8,0.6,1,1c0.2,0.5,0.2,1-0.1,1.5c-0.3,0.5-0.8,0.9-1.1,1.3 c-0.5,0.5-0.8,1.1-0.9,1.7c-0.2,0.6-0.2,1.2,0.2,1.8c0.6,1,2,1.7,2,2.8c-0.1,0.9-1,1.5-1.4,2.2c-0.3,0.6-0.4,1.2-0.2,1.9 c0.2,0.7,0.5,1.3,1,1.8c1,1,2.4,1.4,3.9,1.5c-1.1-1-1.2-2.7-0.5-4c0.7-1.2,2.2-1.9,2.5-3.3c0.2-1.2-0.4-2.5,0.1-3.6 c0.7-1.5,3.3-1.3,4.1-2.9c0.3-0.9,0-1.9,0.3-2.8c0.2-0.7,0.6-1.1,1-1.5c0.4-0.4,0.8-0.9,0.9-1.6c0.1-0.5,0.1-0.9,0.1-1.6"></path>
+
+      </g>
+      <g transform="rotate(17.5114 50 50)">
+        <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1" begin="-0.18000000000000002s"></animateTransform>
+
+        <path fill="#f2f2f2" stroke="#000000" d="M82.8,50c-0.1-3.1-0.4-6.2-1.3-9.2c-0.1-0.4-0.2-0.8-0.2-1.2c-0.1-0.4-0.1-0.8,0-1.2c0.1-0.8,0.3-1.6,0.7-2.4 c0.8-1.5,2-3,3.8-3.9l0,0c1.8-0.9,3.8-1,5.6-0.2c0.9,0.4,1.7,1,2.4,1.8c0.3,0.4,0.7,0.8,1,1.3c0.2,0.5,0.4,1,0.6,1.6 c1.4,4.3,1.9,8.8,1.9,13.3"></path>
+        <path fill="#ff7bac" d="M93.6,35.5c0.1,0.4-0.3,0.8-1,1c-0.6,0.2-1.2,0.1-1.3-0.3c-0.1-0.3,0.3-0.8,0.9-1S93.5,35.1,93.6,35.5z"></path>
+        <path fill="#ff7bac" d="M82.3,39.3c0.1,0.3,0.6,0.3,1.3,0.1c0.6-0.2,1.1-0.6,1-0.9c-0.1-0.3-0.7-0.3-1.3-0.1 C82.6,38.6,82.2,39,82.3,39.3z"></path>
+        <path fill="#000000" d="M88.9,37.5c0.1,0.3-0.2,0.7-0.7,0.8c-0.5,0.1-0.9,0-1-0.3c-0.1-0.3,0.2-0.7,0.7-0.8C88.4,37,88.9,37.2,88.9,37.5z"></path>
+        <path fill="none" stroke="#000000" d="M86.2,39.6c0.2,0.6,0.8,0.9,1.4,0.7c0.6-0.2,0.9-0.9,0.6-2.1c0.3,1.2,1,1.7,1.6,1.5c0.6-0.2,1-0.8,0.8-1.4"></path>
+        <path fill="#f2f2f2" stroke="#000000" d="M82.5,45.9c0,0.5,0.1,0.9,0.5,1.3c0.4,0.4,1,0.6,1.6,0.3c0.3-0.1,0.5-0.3,0.7-0.4c0.5-0.2,1.2,0.1,1.5,0.6 c0.3,0.5,0.3,1,0.3,1.6c0.6-0.6,1-1.4,1.3-2.2c0.2-0.7,0.4-1.5,0.2-2.2c-0.2-0.7-0.8-1.3-1.5-1.5c-0.9-0.2-1.8,0.2-2.5,0.7"></path>
+        <path fill="#f2f2f2" stroke="#000000" d="M96.8,44.1c0.1,0.7,0.1,1.4-0.2,2c-0.3,0.6-0.9,1-1.5,0.7c-0.3-0.1-0.5-0.4-0.8-0.4c-0.6-0.2-1.2,0.3-1.4,0.9 c-0.2,0.6-0.1,1.2-0.1,1.9c-0.6-0.7-1.2-1.5-1.6-2.3c-0.4-0.7-0.6-1.5-0.6-2.2c0-0.8,0.3-1.6,0.9-2c0.7-0.5,1.7-0.5,2.6-0.1"></path>
+        <path fill="#b5b5b5" d="M85.3,37.2c0.1,0.3,1.2,0.2,2.5-0.3c1.3-0.4,2.2-1.1,2.1-1.4c-0.1-0.3-1.2-0.2-2.5,0.3 C86.1,36.3,85.2,36.9,85.3,37.2z"></path>
+        <path fill="#000000" d="M91.5,35c0.3,0.7,0,1.4-0.7,1.6c-0.6,0.2-1.3-0.1-1.6-0.8c-0.2-0.6,0.1-1.3,0.7-1.6C90.6,33.9,91.3,34.3,91.5,35z"></path>
+        <path fill="#000000" d="M85.9,37c0.2,0.6-0.1,1.2-0.7,1.4c-0.6,0.2-1.3-0.1-1.5-0.6c-0.2-0.5,0.1-1.2,0.7-1.4C85,36.2,85.7,36.4,85.9,37z"></path>
+        <path fill="none" stroke="#000000" d="M89.7,29c0.4,0.7-1.4,2.2-3.8,3.4c-2.5,1.2-4.7,1.7-4.9,1.2c-0.3-0.5,1.4-2,3.8-3.4S89.4,28.4,89.7,29z"></path>
+
+      </g></svg>
+      <p>卡旺卡照杯系统测算中。。。</p>
+    </div>
+    </div>
     <div class="index" v-show="showIndex">
       <img src="../assets/logo.png" alt="" class="logo">
     <transition appear appear-class="img-appear" appear-to-class="img-appear-to" appear-active-class="fade-In-active">
@@ -14,10 +59,13 @@
     <transition appear appear-class="pipe-appear" appear-to-class="pipe-appear-to" appear-active-class="pipe-In-active fade-delay3">        
     <img src="../assets/pipe.png" alt="" class="pipe">
     </transition>
-    <transition appear appear-class="pipe-appear" appear-to-class="pipe-appear-to" appear-active-class="fade-In-active fade-delay3">        
+     <div class="mobile-box">
+        <input type="number" class="mobile-input" placeholder="请输入手机号" v-model="mobile"/>
+    </div> 
+    <transition appear appear-class="pipe-appear" appear-to-class="pipe-appear-to" appear-active-class="fade-In-active fade-delay3">       
     <div class="upload-btn">
         <span>上传图片</span>
-        <input type="file" class="upload-input" @change="upload" accept="image/*">
+        <input type="file" class="upload-input" @change="upload" accept="image/*" ref="upload">
     </div>
     </transition>
     </div>
@@ -49,6 +97,7 @@ import crop from "../assets/crop";
 import Vue from "vue";
 import Cropper from "cropperjs";
 import Navbar from "./Navbar";
+import fly from "flyio";
 export default {
   name: "index",
   components: {
@@ -62,6 +111,7 @@ export default {
       showBtns: false,
       isiOS: false,
       showloading: false,
+      mobile: "",
       words: [
         require("../assets/word1.png"),
         require("../assets/word2.png"),
@@ -209,7 +259,20 @@ export default {
                 // ctx.drawImage(imgs[2], defaultPos.word.x, defaultPos.word.y);
                 var urlSrc = canvas.toDataURL("image/jpeg", 1);
                 Vue.prototype.$urlSrc = urlSrc;
-                this.$router.push({ name: "Result" });
+                let blob = ImageUtil.convertBase64UrlToFileOrBlob(urlSrc);
+                console.log(blob);
+                let formData = new FormData();
+                formData.append("pic", blob);
+                formData.append("mobile", this.mobile);
+                fly
+                  .post("http://kawk.shuxihu.cn/new_api/addDo", formData)
+                  .then(res => {
+                    this.$router.push({ name: "Result" });
+                  })
+                  .catch(error => {
+                    console.log(error);
+                    this.$router.push({ name: "Result" });
+                  });
               }
             });
           } catch (error) {
@@ -219,11 +282,18 @@ export default {
       }
     },
     upload(e) {
+      let mobileRgx = /^(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[0-9])[0-9]{8}$/;
+      if (!mobileRgx.test(this.mobile)) {
+        alert("手机号码不正确");
+        this.$refs.upload.value = "";
+        return;
+      }
       let file = e.target.files[0];
       if (!ImageUtil._validImageSizeAndType(file)) {
         alert("请选在小于10M的照片");
         return;
       }
+       
       this.url = ImageUtil.getObjectURL(file);
       // let arrayBuffer = ImageUtil.getArrayBuffer(file, res => {
 
@@ -275,6 +345,12 @@ export default {
 </script>
 <style lang="less">
 @import "~cropperjs/dist/cropper.css";
+.loading-box {
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 .index img {
   position: absolute;
   left: 0;
@@ -367,7 +443,7 @@ export default {
   text-align: center;
   color: #fff;
   border-radius: 5px;
-  top: 5.9rem;
+  top: 6.8rem;
   left: 0;
   right: 0;
   margin: auto;
@@ -466,5 +542,31 @@ export default {
 .ensureWord {
   position: absolute;
   right: 0.2rem;
+}
+.mobile-input {
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  position: absolute;
+  top: 5.6rem;
+  width: 3.7rem;
+  height: 0.88rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 1px solid #191919;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  &::-webkit-input-placeholder {
+    text-align: center;
+    color: #191919;
+  }
+}
+.loadding-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #fff;
 }
 </style>
